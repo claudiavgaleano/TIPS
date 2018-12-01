@@ -1,0 +1,139 @@
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar collapse">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="home"></span>
+                  Ejemplo 1 <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file"></span>
+                  Ejemplo 2
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="shopping-cart"></span>
+                  Ejemplo 3
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  Ejemplo 4
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 ">
+          <header class="navbar navbar-expand-lg flex-column flex-md-row bd-navbar sticky-top navbar-light bg-light ml-10">
+            <div class="h2">Prueba para UX</div>
+          </header>
+
+          <ngb-tabset>
+            <ngb-tab title="Tab 1">
+              <ng-template ngbTabContent>
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Título Card</h4>
+                    <div class="alert alert-success" role="alert">
+                      Has tenido éxito!
+                    </div>
+                    <div class="jumbotron">
+                      <form id="form1">
+                        <div class="row">
+                          <div class="col-s-12 col-md-3">
+                            <div class="form-group">
+                              <label class="control-label" for="documento">Nº de Documento</label>
+                              <input type="text" class="form-control" id="documento">
+                            </div>
+                          </div>
+                          <div class="col-s-12 col-md-3">
+                            <div class="form-group">
+                              <label class="control-label" for="nombre">Nombre</label>
+                              <input type="text" class="form-control" id="nombre">
+                            </div>
+                          </div>
+                          <div class="col-s-12 col-md-3">
+                            <div class="form-group">
+                              <label class="control-label" for="apellido">Apellido</label>
+                              <input type="text" class="form-control" id="apellido">
+                            </div>
+                          </div>
+                          <div class="col-s-12 col-md-3">
+                            <div class="form-group">
+                              <label class="control-label" for="hc">Fecha</label>
+                              <input type="text" class="form-control" id="fecha">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-s-12 col-md-4">
+                            <label>Input group button</label>
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">GO</div>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-md-4">
+                            <label>Input group button</label>
+                            <div class="input-group">
+                              <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                              <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>Dropdown</button>
+                                <div class="dropdown-menu" ngbDropdownMenu>
+                                  <button class="dropdown-item">Ejemplo 1</button>
+                                  <button class="dropdown-item">Ejemplo 2</button>
+                                  <button class="dropdown-item">Ejemplo 3</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12 col-md-4">
+                            <button type="submit" class="btn btn-primary">BUSCAR</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="table-responsive">
+                      <app-table></app-table>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Tab 2">
+              <ng-template ngbTabContent>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Tab 3">
+              <ng-template ngbTabContent>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Tab 4">
+              <ng-template ngbTabContent>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure cupiditate quos adipisci nam dignissimos vero, omnis dolores sapiente eius. Ut in amet odit sed rem excepturi unde maiores sunt voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+              </ng-template>
+            </ngb-tab>
+          </ngb-tabset>
+
+        </main>
+      </div>
+    </div>
