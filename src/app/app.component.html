@@ -1,60 +1,97 @@
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
 
-    </nav>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <aside class="col-12 col-md-2 p-0 fixed-top bg-secundario">
 
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar collapse">
-          <div class="sidebar-sticky">
+                    <nav class="navbar navbar-expand navbar-dark bg-secundario flex-md-column flex-row align-items-start py-2">
+                      <a class="navbar-brand w-100" href="#">LOGO</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse align-items-start" id="navbarCollapse">
+                            <ul class="flex-md-column flex-row navbar-nav  mr-auto">
+
+                                <li class="nav-item">
+                                    <a class="nav-link pl-0" href="#"><span class=" d-md-inline">Link</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pl-0" href="#"> <span class=" d-md-inline">Link</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pl-0" href="#"> <span class=" d-md-inline">Link</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pl-0" href="#"> <span class=" d-md-inline">Link</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pl-0" href="#"> <span class=" d-md-inline">Link</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+       <!--<nav class="col-md-2 d-md-block bg-light side">
+         <a class="navbar-brand"><i class="fas fa-ambulance fa-5x"></i></a>
+
+         <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  <span data-feather="home"></span>
-                  Ejemplo 1 <span class="sr-only">(current)</span>
+                  Ejemplo 1
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="file"></span>
                   Ejemplo 2
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="shopping-cart"></span>
                   Ejemplo 3
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="users"></span>
                   Ejemplo 4
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Ejemplo 5
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Ejemplo 6
                 </a>
               </li>
             </ul>
           </div>
-        </nav>
+        </nav>-->
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 ">
-          <header class="navbar navbar-expand-lg flex-column flex-md-row bd-navbar sticky-top navbar-light bg-light ml-10">
-            <div class="h2">Prueba para UX</div>
-          </header>
-
+        <main role="main" class="col-md-10 ml-sm-auto main">
+          <nav class="navbar navbar-light bg-light col-sm-12 sticky-top mainheader">
+              <div class="h2">Prueba para UX</div>
+          </nav>
+        <div class="custom-tab">
           <ngb-tabset>
             <ngb-tab title="Tab 1">
               <ng-template ngbTabContent>
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Título Card</h4>
+                    <hr>
                     <div class="alert alert-success" role="alert">
                       Has tenido éxito!
                     </div>
+                    <h6 class="mt-6 d-block">Buscar Personas</h6>
+                    <hr>
                     <div class="jumbotron">
                       <form id="form1">
                         <div class="row">
                           <div class="col-s-12 col-md-3">
                             <div class="form-group">
-                              <label class="control-label" for="documento">Nº de Documento</label>
+                              <label class="control-label" for="documento">DNI</label>
                               <input type="text" class="form-control" id="documento">
                             </div>
                           </div>
@@ -90,9 +127,10 @@
                           <div class="col-xs-12 col-md-4">
                             <label>Input group button</label>
                             <div class="input-group">
-                              <input type="text" class="form-control" aria-label="Text input with dropdown button">
+
                               <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                                <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>Dropdown</button>
+                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                <button type="button" class="btn btn-primary" ngbDropdownToggle>Dropdown</button>
                                 <div class="dropdown-menu" ngbDropdownMenu>
                                   <button class="dropdown-item">Ejemplo 1</button>
                                   <button class="dropdown-item">Ejemplo 2</button>
@@ -103,7 +141,7 @@
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-sm-12 col-md-4">
+                          <div class="col-sm-12 col-md-4 search">
                             <button type="submit" class="btn btn-primary">BUSCAR</button>
                           </div>
                         </div>
@@ -119,21 +157,33 @@
             </ngb-tab>
             <ngb-tab title="Tab 2">
               <ng-template ngbTabContent>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+                <div class="card">
+                  <div class="card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+                  </div>
+                </div>
               </ng-template>
             </ngb-tab>
             <ngb-tab title="Tab 3">
               <ng-template ngbTabContent>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+                <div class="card">
+                  <div class="card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+                  </div>
+                </div>
               </ng-template>
             </ngb-tab>
             <ngb-tab title="Tab 4">
               <ng-template ngbTabContent>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure cupiditate quos adipisci nam dignissimos vero, omnis dolores sapiente eius. Ut in amet odit sed rem excepturi unde maiores sunt voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+                <div class="card">
+                  <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure cupiditate quos adipisci nam dignissimos vero, omnis dolores sapiente eius. Ut in amet odit sed rem excepturi unde maiores sunt voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+                  </div>
+                </div>
               </ng-template>
             </ngb-tab>
           </ngb-tabset>
-
+          </div>
         </main>
       </div>
     </div>

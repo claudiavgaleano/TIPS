@@ -1,3 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import './_variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border-bottom: 3px solid #569cd4;
+}
