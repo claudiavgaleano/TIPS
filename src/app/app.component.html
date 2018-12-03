@@ -1,189 +1,171 @@
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar" [ngbCollapse]="isCollapsed" class="{{isCollapsed ? 'active' : ''}}">
+        <div class="sidebar-header">
+            <h3>LOGO</h3>
+        </div>
 
-    <div class="container-fluid h-100">
-      <div class="row h-100">
-        <aside class="col-12 col-md-2 p-0 fixed-top bg-secundario">
+        <ul class="list-unstyled components">
 
-                    <nav class="navbar navbar-expand navbar-dark bg-secundario flex-md-column flex-row align-items-start py-2">
-                      <a class="navbar-brand w-100" href="#">LOGO</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse align-items-start" id="navbarCollapse">
-                            <ul class="flex-md-column flex-row navbar-nav  mr-auto">
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >Ejemplo 1</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu" >
+                    <li>
+                        <a href="#">Inicio 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Inicio 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Inicio 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Ejemplo 2</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ejemplo 3</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Pagina 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Pagina 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Pagina 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Ejemplo 4</a>
+            </li>
+            <li>
+                <a href="#">Ejemplo 5</a>
+            </li>
+        </ul>
+    </nav>
 
-                                <li class="nav-item">
-                                    <a class="nav-link pl-0" href="#"><span class=" d-md-inline">Link</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link pl-0" href="#"> <span class=" d-md-inline">Link</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link pl-0" href="#"> <span class=" d-md-inline">Link</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link pl-0" href="#"> <span class=" d-md-inline">Link</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link pl-0" href="#"> <span class=" d-md-inline">Link</span></a>
-                                </li>
-                            </ul>
+    <!-- Page Content  -->
+    <div id="content">
+      <nav class="navbar navbar-expand-lg sticky-top mainheader">
+        <div class="container-fluid">
+          <div class="h2">Prueba para UX</div>
+          <button type="button" id="sidebarCollapse" class="btn btn-info d-md-none" (click)="isCollapsed = !isCollapsed"
+              [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+              <i class="fas fa-align-left"></i>
+              <span>Toggle Sidebar</span>
+          </button>
+        </div>
+      </nav>
+      <ngb-tabset>
+        <ngb-tab title="Tab 1">
+          <ng-template ngbTabContent>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Título Card</h4>
+                <hr>
+                <div class="alert alert-success" role="alert">
+                  Has tenido éxito!
+                </div>
+                <h6 class="mt-6 d-block">Buscar Personas</h6>
+                <hr>
+                <div class="jumbotron">
+                  <form id="form1">
+                    <div class="row">
+                      <div class="col-s-12 col-md-3">
+                        <div class="form-group">
+                          <label class="control-label" for="documento">Nº de Documento</label>
+                          <input type="text" class="form-control" id="documento">
                         </div>
-                    </nav>
-                </aside>
-       <!--<nav class="col-md-2 d-md-block bg-light side">
-         <a class="navbar-brand"><i class="fas fa-ambulance fa-5x"></i></a>
-
-         <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  Ejemplo 1
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Ejemplo 2
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Ejemplo 3
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Ejemplo 4
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Ejemplo 5
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Ejemplo 6
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>-->
-
-        <main role="main" class="col-md-10 ml-sm-auto main">
-          <nav class="navbar navbar-light bg-light col-sm-12 sticky-top mainheader">
-              <div class="h2">Prueba para UX</div>
-          </nav>
-        <div class="custom-tab">
-          <ngb-tabset>
-            <ngb-tab title="Tab 1">
-              <ng-template ngbTabContent>
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Título Card</h4>
+                      </div>
+                      <div class="col-s-12 col-md-3">
+                        <div class="form-group">
+                          <label class="control-label" for="nombre">Nombre</label>
+                          <input type="text" class="form-control" id="nombre">
+                        </div>
+                      </div>
+                      <div class="col-s-12 col-md-3">
+                        <div class="form-group">
+                          <label class="control-label" for="apellido">Apellido</label>
+                          <input type="text" class="form-control" id="apellido">
+                        </div>
+                      </div>
+                      <div class="col-s-12 col-md-3">
+                        <div class="form-group">
+                          <label class="control-label" for="hc">Fecha de Nacimiento</label>
+                          <input type="text" class="form-control" id="fecha">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 col-md-4">
+                        <label>Input group button</label>
+                        <div class="input-group">
+                          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <button type="button" class="btn btn-primary" ngbDropdownToggle>Celular</button>
+                            <div class="dropdown-menu" ngbDropdownMenu>
+                              <button class="dropdown-item">Telefono</button>
+                              <button class="dropdown-item">Fax</button>
+                              <button class="dropdown-item">Personalizado</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-4 search">
+                        <div class="input-group">
+                        <div class="btn-group searc" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-outline-primary">BOTON 1</button>
+                          <button type="button" class="btn btn-outline-primary">BOTON 2</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
                     <hr>
-                    <div class="alert alert-success" role="alert">
-                      Has tenido éxito!
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12 search">
+                        <button type="submit" class="btn btn-primary float-right">BUSCAR</button>
+                      </div>
                     </div>
-                    <h6 class="mt-6 d-block">Buscar Personas</h6>
-                    <hr>
-                    <div class="jumbotron">
-                      <form id="form1">
-                        <div class="row">
-                          <div class="col-s-12 col-md-3">
-                            <div class="form-group">
-                              <label class="control-label" for="documento">DNI</label>
-                              <input type="text" class="form-control" id="documento">
-                            </div>
-                          </div>
-                          <div class="col-s-12 col-md-3">
-                            <div class="form-group">
-                              <label class="control-label" for="nombre">Nombre</label>
-                              <input type="text" class="form-control" id="nombre">
-                            </div>
-                          </div>
-                          <div class="col-s-12 col-md-3">
-                            <div class="form-group">
-                              <label class="control-label" for="apellido">Apellido</label>
-                              <input type="text" class="form-control" id="apellido">
-                            </div>
-                          </div>
-                          <div class="col-s-12 col-md-3">
-                            <div class="form-group">
-                              <label class="control-label" for="hc">Fecha</label>
-                              <input type="text" class="form-control" id="fecha">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-s-12 col-md-4">
-                            <label>Input group button</label>
-                            <div class="input-group">
-                              <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon">GO</div>
-                              </div>
-                              <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                            </div>
-                          </div>
-                          <div class="col-xs-12 col-md-4">
-                            <label>Input group button</label>
-                            <div class="input-group">
-
-                              <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                <button type="button" class="btn btn-primary" ngbDropdownToggle>Dropdown</button>
-                                <div class="dropdown-menu" ngbDropdownMenu>
-                                  <button class="dropdown-item">Ejemplo 1</button>
-                                  <button class="dropdown-item">Ejemplo 2</button>
-                                  <button class="dropdown-item">Ejemplo 3</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-12 col-md-4 search">
-                            <button type="submit" class="btn btn-primary">BUSCAR</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-
-                    <div class="table-responsive">
-                      <app-table></app-table>
-                    </div>
-                  </div>
+                  </form>
                 </div>
-              </ng-template>
-            </ngb-tab>
-            <ngb-tab title="Tab 2">
-              <ng-template ngbTabContent>
-                <div class="card">
-                  <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
-                  </div>
+                <div class="table-responsive">
+                  <app-table></app-table>
                 </div>
-              </ng-template>
-            </ngb-tab>
-            <ngb-tab title="Tab 3">
-              <ng-template ngbTabContent>
-                <div class="card">
-                  <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
-                  </div>
-                </div>
-              </ng-template>
-            </ngb-tab>
-            <ngb-tab title="Tab 4">
-              <ng-template ngbTabContent>
-                <div class="card">
-                  <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure cupiditate quos adipisci nam dignissimos vero, omnis dolores sapiente eius. Ut in amet odit sed rem excepturi unde maiores sunt voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
-                  </div>
-                </div>
-              </ng-template>
-            </ngb-tab>
-          </ngb-tabset>
+              </div>
+            </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Tab 2">
+        <ng-template ngbTabContent>
+          <div class="card">
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+            </div>
           </div>
-        </main>
-      </div>
-    </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Tab 3">
+        <ng-template ngbTabContent>
+          <div class="card">
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Tab 4">
+        <ng-template ngbTabContent>
+          <div class="card">
+            <div class="card-body">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure cupiditate quos adipisci nam dignissimos vero, omnis dolores sapiente eius. Ut in amet odit sed rem excepturi unde maiores sunt voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error vero quidem velit totam temporibus sed eos, doloremque magni id nostrum quod ea dolore explicabo, necessitatibus hic tempore sequi perspiciatis. Cupiditate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At natus aliquam ullam quaerat autem dolor vero eum, alias cupiditate est quos necessitatibus assumenda qui. Illum, fugiat, eius? Officia, dolorum, cupiditate?</p>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+</div>

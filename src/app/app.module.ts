@@ -5,10 +5,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+
   ],
   imports: [
     BrowserModule,
