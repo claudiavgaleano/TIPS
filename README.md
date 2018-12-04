@@ -1,6 +1,11 @@
-# TipsProyect
+# Actividad Práctica TIPS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+
+## Pasos para correr la aplicación
+1-Descargar el código
+2-Ejecutar `npm install` para descargar las dependencias necesarias para la correcta visualización del proyecto.
+3- Utilizar `ng serve` para ejecutar la aplicación
 
 ## Development server
 

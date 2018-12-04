@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tips-proyect';
   public isCollapsed = false;
+  public isCollapsedHome = true;
+  public isCollapsedPage = true;
 }
